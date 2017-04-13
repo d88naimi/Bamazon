@@ -22,23 +22,21 @@ connection.connect(function(err) {
 
 // global var to hold user's total
 var total = 0;
-
-
-
+// function to display Inventory
 var runSearch = function() {
 
 	// initial display of inventory
 	displayInventory();
-
+// question and promts
   inquirer.prompt([
   {
     name: "itemPicked",
-    message: "Please pick an item to buy by ID#",
+    message: "Choose an item to purchase ID#",
 
   },
    {
     name: "howMany",
-    message: "How many would you like to add to your cart?",
+    message: "Quantity?",
   }
   ]).then(function(answer) {
 
@@ -61,7 +59,7 @@ var runSearch = function() {
       }
       else{
 
-      console.log("Sorry, there's not enough inventory to complete your request");
+      console.log("Not enough inventory to complete your order");
       runSearch();
 
       }
