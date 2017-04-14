@@ -63,7 +63,6 @@ var runSearch = function() {
       runSearch();
 
       }
-
     
     });
 
